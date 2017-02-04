@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String initialTotalValue = "";
+        if (savedInstanceState != null) {
+            initialTotalValue = savedInstanceState.getString("totalAmount");
+        }
+
         input_billAmount = (EditText) findViewById(R.id.input_billAmount);
         buttonTip15 = (Button) findViewById(R.id.button_tip_15);
         buttonTip20 = (Button) findViewById(R.id.button_tip_20);
@@ -27,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         buttonTip15.setOnClickListener(this);
         buttonTip20.setOnClickListener(this);
+
+        totalAmount.setText(initialTotalValue);
     }
 
     @Override
@@ -55,5 +62,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } catch (NumberFormatException e) {
             return null;
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString("totalAmount", totalAmount.getText().toString());
+        super.onSaveInstanceState(outState);
     }
 }
