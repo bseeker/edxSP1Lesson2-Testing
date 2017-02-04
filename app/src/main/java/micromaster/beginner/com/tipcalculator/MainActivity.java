@@ -1,6 +1,7 @@
 package micromaster.beginner.com.tipcalculator;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText input_billAmount;
     private Button buttonTip15;
     private Button buttonTip20;
-    TextView totalAmount;
+    private TextView totalAmount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
