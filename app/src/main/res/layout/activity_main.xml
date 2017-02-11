@@ -27,24 +27,6 @@
 
     </android.support.design.widget.TextInputLayout>
 
-    <TextView
-        android:text="@string/total_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_tip_15"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
-        android:id="@+id/textView"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:id="@+id/totalAmount"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:text="@string/tip_20"
         android:layout_width="wrap_content"
@@ -63,4 +45,22 @@
         android:layout_below="@+id/input_layout_billAmount"
         android:layout_alignLeft="@+id/input_layout_billAmount"
         android:layout_alignStart="@+id/input_layout_billAmount" />
+
+    <TextView
+        android:text="@string/total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_tip_15"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:id="@+id/textView"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/totalAmount"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
