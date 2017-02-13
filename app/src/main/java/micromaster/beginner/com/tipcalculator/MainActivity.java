@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonTip20.setOnClickListener(this);
 
         totalAmount.setText(initialTotalValue);
+
+        //TODO: add content description for buttonTip15 button
+        String descriptionTwentyPercent = getResources().getString(R.string.description_20_percent);
+        buttonTip20.setContentDescription(descriptionTwentyPercent);
     }
 
     @Override

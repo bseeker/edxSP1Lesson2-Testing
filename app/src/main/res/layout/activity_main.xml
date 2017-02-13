@@ -34,8 +34,10 @@
         android:id="@+id/button_tip_20"
         android:layout_above="@+id/textView"
         android:layout_alignRight="@+id/input_layout_billAmount"
-        android:layout_alignEnd="@+id/input_layout_billAmount" />
+        android:layout_alignEnd="@+id/input_layout_billAmount"
+        android:contentDescription="@string/description_20_percent"/>
 
+    <!--TODO: add content description to rest of the views-->
     <Button
         android:text="@string/tip_15"
         android:layout_width="wrap_content"
