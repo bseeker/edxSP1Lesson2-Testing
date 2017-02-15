@@ -10,6 +10,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="micromaster.beginner.com.tipcalculator.MainActivity">
 
+    <Button
+        android:text="@string/tip_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_tip_30"
+        android:layout_below="@+id/button_tip_15"
+        android:layout_alignLeft="@+id/button_tip_15"
+        android:layout_alignStart="@+id/button_tip_15"
+        android:layout_marginTop="22dp" />
+
     <android.support.design.widget.TextInputLayout
         android:id="@+id/input_layout_billAmount"
         android:layout_width="200dp"
@@ -28,15 +38,6 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:text="@string/tip_20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_tip_20"
-        android:layout_above="@+id/textView"
-        android:layout_alignRight="@+id/input_layout_billAmount"
-        android:layout_alignEnd="@+id/input_layout_billAmount" />
-
-    <Button
         android:text="@string/tip_15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -47,20 +48,39 @@
         android:layout_alignStart="@+id/input_layout_billAmount" />
 
     <TextView
-        android:text="@string/total_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_tip_15"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
-        android:id="@+id/textView"
-        android:textStyle="bold"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:id="@+id/totalAmount"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:layout_below="@+id/button_tip_30"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/tip_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_tip_20"
+        android:layout_alignTop="@+id/button_tip_15"
+        android:layout_alignRight="@+id/input_layout_billAmount"
+        android:layout_alignEnd="@+id/input_layout_billAmount" />
+
+    <Button
+        android:text="@string/tip_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_tip_40"
+        android:layout_alignBaseline="@+id/button_tip_30"
+        android:layout_alignBottom="@+id/button_tip_30"
+        android:layout_alignLeft="@+id/button_tip_20"
+        android:layout_alignStart="@+id/button_tip_20" />
 </RelativeLayout>
