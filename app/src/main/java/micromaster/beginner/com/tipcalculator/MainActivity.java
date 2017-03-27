@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonTip15;
     private Button buttonTip20;
     private TextView totalAmount;
+    private TipCalculator tipCalculator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         String initialTotalValue = "";
+        tipCalculator = new TipCalculator();
+
         if (savedInstanceState != null) {
             initialTotalValue = savedInstanceState.getString("totalAmount");
         }
@@ -48,12 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void calculateTip(double tipValue) {
-        Double tipDoubleValue = parseTip(input_billAmount.getText().toString());
-        if (tipDoubleValue != null) {
-            tipDoubleValue += tipDoubleValue * tipValue;
-            totalAmount.setText(tipDoubleValue.toString());
-        }
+    public void calculateTip(double tipValue) {
+        Double billAmount = tipCalculator.parseBillValue(input_billAmount.getText().toString());
+        String tipCalculated = tipCalculator.calculateTip(billAmount, tipValue);
+        totalAmount.setText(tipCalculated);
     }
 
     public static Double parseTip(String tipValue) {

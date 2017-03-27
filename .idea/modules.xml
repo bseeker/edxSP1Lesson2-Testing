@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TipCalculator.iml" filepath="$PROJECT_DIR$/TipCalculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edxSP1Lesson2-Testing.iml" filepath="$PROJECT_DIR$/edxSP1Lesson2-Testing.iml" />
     </modules>
   </component>
 </project>
